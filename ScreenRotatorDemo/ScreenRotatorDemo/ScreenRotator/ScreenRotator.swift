@@ -172,7 +172,7 @@ private extension ScreenRotator {
                 // 而是调用`setNeedsUpdateOfSupportedInterfaceOrientations`进行屏幕旋转。
                 for window in windowScene.windows {
                     guard let rootViewController = window.rootViewController else { continue }
-                    // 由于`Neves`中只用到`rootViewController`控制屏幕方向，所以只对`rootViewController`调用即可。
+                    // 由于Demo中只用到`rootViewController`控制屏幕方向，所以只对`rootViewController`调用即可。
                     rootViewController.setNeedsUpdateOfSupportedInterfaceOrientations()
                     // 若需要全部控制器都执行`setNeedsUpdateOfSupportedInterfaceOrientations`，可调用该函数：
                     // Self.setNeedsUpdateOfSupportedInterfaceOrientations(rootViewController, nil)

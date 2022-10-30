@@ -206,7 +206,7 @@ static JPScreenRotator *sharedInstance_;
             if (![scene isKindOfClass:UIWindowScene.class]) continue;
             UIWindowScene *windowScene = (UIWindowScene *)scene;
             // 一般来说app只有一个`windowScene`，而`windowScene`内可能有多个`window`，
-            // 例如`Neves`中至少有两个`window`：第一个是app主体的`window`，第二个则是`FunnyButton`所在的`window`，
+            // 例如Demo中至少有两个`window`：第一个是app主体的`window`，第二个则是`FunnyButton`所在的`window`，
             // 所以需要遍历全部`window`进行旋转，保证全部`window`都能保持一致的屏幕方向。
             
             // `iOS16`之后`attemptRotationToDeviceOrientation`建议不再使用（虽然还起效），
