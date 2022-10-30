@@ -12,6 +12,20 @@
         ✅ 兼容 OC & Swift & SwiftUI；
         ✅ API简单易用。
 
+## 使用效果
+
+- 随时随地改变/保持屏幕方向
+
+![ScreenRotator_1.gif](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_1.gif)
+
+- `push`或`present`一个跟当前方向不一样的新页面
+
+![ScreenRotator_2.gif](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_2.gif)
+
+- 视频的横竖屏切换
+
+![ScreenRotator_3.gif](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_3.gif)
+
 ## 使用前提
 
 1. 让单例`ScreenRotator.shared`**全局控制**屏幕方向，首先得在`AppDelegate`中重写：
