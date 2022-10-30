@@ -35,7 +35,7 @@ func application(_ application: UIApplication, supportedInterfaceOrientationsFor
 }
 ```
 
-2. 之后不需要再重写`ViewController`的`supportedInterfaceOrientations`和`shouldAutorotate`；
+2. 不需要再重写`ViewController`的`supportedInterfaceOrientations`和`shouldAutorotate`；
 
 3. 如需获取屏幕实时尺寸，在对应`ViewController`中重写：
 ```swift
@@ -63,7 +63,7 @@ override func viewWillTransition(to size: CGSize, with coordinator: UIViewContro
 }
 ```
 
-4. 如需监听屏幕的旋转，**也不要再监听`UIDevice.orientationDidChangeNotification`通知**，而是监听该工具类提供的`ScreenRotator.orientationDidChangeNotification`通知。或者通过闭包的形式实现监听：
+4. 如需监听屏幕的旋转，**不用再监听`UIDevice.orientationDidChangeNotification`通知**，而是监听该工具类提供的`ScreenRotator.orientationDidChangeNotification`通知。或者通过闭包的形式实现监听：
 ```swift
 ScreenRotator.shard.orientationMaskDidChange = { orientationMask in 
     // 更新`FunnyButton`所属`window`的方向
@@ -72,6 +72,7 @@ ScreenRotator.shard.orientationMaskDidChange = { orientationMask in
 ```
 
 ## API
+
 全局使用单例`ScreenRotator.shared`调用：
 
 1. 旋转至目标方向
@@ -139,6 +140,7 @@ var lockLandscapeWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
 ```
 
 ## 可监听的通知
+
 1. 屏幕方向发生改变的通知：
 - `ScreenRotator.orientationDidChangeNotification`
     - object: `orientationMask`（UIInterfaceOrientationMask）
@@ -154,9 +156,12 @@ var lockLandscapeWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
 ## 兼容 OC & SwiftUI
 
 - OC：使用专门用OC写的`JPScreenRotator`，用法和`ScreenRotator`完全一致。
+
 - SwiftUI：可以通过`ScreenRotatorState`来更新状态。
+    - 具体使用可以参考Demo中的`RotatorView`。
 
 ## Tips
+
 当`push`或`present`一个跟当前方向不一样的新页面时，建议**先旋转**，再延时至少0.1s才打开，否则新页面的屏幕方向会错乱。例如：
 ```swift
 let testVC = UIViewController()
