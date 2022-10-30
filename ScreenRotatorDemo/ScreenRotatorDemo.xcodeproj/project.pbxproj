@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001234A1290A366400D9389A /* ScreenRotatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001234A0290A366400D9389A /* ScreenRotatorState.swift */; };
+		004840E8290B74550035DAAC /* RotatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004840E7290B74550035DAAC /* RotatorViewController.swift */; };
+		004840EC290BEC1E0035DAAC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004840EB290BEC1E0035DAAC /* BaseViewController.swift */; };
+		004840EF290BEF560035DAAC /* IMG_6351.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 004840ED290BEF560035DAAC /* IMG_6351.jpg */; };
+		004840F0290BEF560035DAAC /* IMG_6350.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 004840EE290BEF560035DAAC /* IMG_6350.jpg */; };
+		004840F2290BF23A0035DAAC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004840F1290BF23A0035DAAC /* TestViewController.swift */; };
+		00569C7F290D122D00B9CAA7 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00569C7E290D122D00B9CAA7 /* VideoViewController.swift */; };
+		006915BF2903E78500B53771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006915BE2903E78500B53771 /* AppDelegate.swift */; };
+		006915C12903E78500B53771 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006915C02903E78500B53771 /* SceneDelegate.swift */; };
+		006915C32903E78500B53771 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006915C22903E78500B53771 /* MainViewController.swift */; };
+		006915C82903E78600B53771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006915C72903E78600B53771 /* Assets.xcassets */; };
+		006915CB2903E78600B53771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006915C92903E78600B53771 /* LaunchScreen.storyboard */; };
+		006915D62903E7AB00B53771 /* ScreenRotator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006915D52903E7AB00B53771 /* ScreenRotator.swift */; };
+		006915DD2903E7E700B53771 /* JPScreenRotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 006915DB2903E7E700B53771 /* JPScreenRotator.m */; };
+		00DFE96A2906BBCD00B6611B /* IMG_6353.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00DFE9682906BBCD00B6611B /* IMG_6353.jpg */; };
+		00DFE96B2906BBCD00B6611B /* IMG_6352.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00DFE9692906BBCD00B6611B /* IMG_6352.jpg */; };
+		00DFE9C22906BC4200B6611B /* UIColor.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9852906BC4100B6611B /* UIColor.Extension.swift */; };
+		00DFE9CE2906BC4200B6611B /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9932906BC4100B6611B /* Function.swift */; };
+		00DFE9E72906BCBB00B6611B /* RotatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9E62906BCBB00B6611B /* RotatorView.swift */; };
+		00DFE9ED2906C09C00B6611B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00DFE9EC2906C09C00B6611B /* Main.storyboard */; };
+		00DFE9EF29078AE100B6611B /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9EE29078AE100B6611B /* MainWindow.swift */; };
+		00DFEA002909153500B6611B /* AnimatableModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9FE2909153500B6611B /* AnimatableModifiers.swift */; };
+		00DFEA012909153500B6611B /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9FF2909153500B6611B /* Modifiers.swift */; };
+		1A3C91B5290E6DA100D2C3B5 /* ali.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C91B4290E6DA100D2C3B5 /* ali.mp4 */; };
+		A59DB65C6C3BE8FD0E189433 /* Pods_ScreenRotatorDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814E84ED6448F0D31F46E77F /* Pods_ScreenRotatorDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		001234A0290A366400D9389A /* ScreenRotatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRotatorState.swift; sourceTree = "<group>"; };
+		004840E7290B74550035DAAC /* RotatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatorViewController.swift; sourceTree = "<group>"; };
+		004840EB290BEC1E0035DAAC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		004840ED290BEF560035DAAC /* IMG_6351.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6351.jpg; sourceTree = "<group>"; };
+		004840EE290BEF560035DAAC /* IMG_6350.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6350.jpg; sourceTree = "<group>"; };
+		004840F1290BF23A0035DAAC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		00569C7E290D122D00B9CAA7 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		006915BB2903E78500B53771 /* ScreenRotatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenRotatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		006915BE2903E78500B53771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		006915C02903E78500B53771 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		006915C22903E78500B53771 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		006915C72903E78600B53771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		006915CA2903E78600B53771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		006915CC2903E78600B53771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		006915D52903E7AB00B53771 /* ScreenRotator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRotator.swift; sourceTree = "<group>"; };
+		006915D72903E7B900B53771 /* ScreenRotator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScreenRotator-Bridging-Header.h"; sourceTree = "<group>"; };
+		006915DB2903E7E700B53771 /* JPScreenRotator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPScreenRotator.m; sourceTree = "<group>"; };
+		006915DC2903E7E700B53771 /* JPScreenRotator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPScreenRotator.h; sourceTree = "<group>"; };
+		00DFE9682906BBCD00B6611B /* IMG_6353.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6353.jpg; sourceTree = "<group>"; };
+		00DFE9692906BBCD00B6611B /* IMG_6352.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6352.jpg; sourceTree = "<group>"; };
+		00DFE9852906BC4100B6611B /* UIColor.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.Extension.swift; sourceTree = "<group>"; };
+		00DFE9932906BC4100B6611B /* Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		00DFE9E62906BCBB00B6611B /* RotatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatorView.swift; sourceTree = "<group>"; };
+		00DFE9EC2906C09C00B6611B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		00DFE9EE29078AE100B6611B /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		00DFE9FE2909153500B6611B /* AnimatableModifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableModifiers.swift; sourceTree = "<group>"; };
+		00DFE9FF2909153500B6611B /* Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		1A3C91B4290E6DA100D2C3B5 /* ali.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ali.mp4; sourceTree = "<group>"; };
+		1A3C91D0290E941E00D2C3B5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		225C191864032CC3D8008E31 /* Pods-ScreenRotatorDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenRotatorDemo.debug.xcconfig"; path = "Target Support Files/Pods-ScreenRotatorDemo/Pods-ScreenRotatorDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		814E84ED6448F0D31F46E77F /* Pods_ScreenRotatorDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenRotatorDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		989549011B342956D4C7BA39 /* Pods-ScreenRotator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenRotator.release.xcconfig"; path = "Target Support Files/Pods-ScreenRotator/Pods-ScreenRotator.release.xcconfig"; sourceTree = "<group>"; };
+		9B939DD792A8FAE93228F6C9 /* Pods-ScreenRotator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenRotator.debug.xcconfig"; path = "Target Support Files/Pods-ScreenRotator/Pods-ScreenRotator.debug.xcconfig"; sourceTree = "<group>"; };
+		F275D56060194366EAB8C2AF /* Pods-ScreenRotatorDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScreenRotatorDemo.release.xcconfig"; path = "Target Support Files/Pods-ScreenRotatorDemo/Pods-ScreenRotatorDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		006915B82903E78500B53771 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A59DB65C6C3BE8FD0E189433 /* Pods_ScreenRotatorDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		004840E9290BDB2C0035DAAC /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				00DFE9FF2909153500B6611B /* Modifiers.swift */,
+				00DFE9FE2909153500B6611B /* AnimatableModifiers.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		004840EA290BEBFA0035DAAC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				00DFE9932906BC4100B6611B /* Function.swift */,
+				004840EB290BEC1E0035DAAC /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		006915B22903E78500B53771 = {
+			isa = PBXGroup;
+			children = (
+				1A3C91D0290E941E00D2C3B5 /* README.md */,
+				006915BD2903E78500B53771 /* ScreenRotatorDemo */,
+				006915BC2903E78500B53771 /* Products */,
+				AEC49BDB9D381DA1D5988213 /* Pods */,
+				9F843AF3695FA8404706E74C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		006915BC2903E78500B53771 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				006915BB2903E78500B53771 /* ScreenRotatorDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		006915BD2903E78500B53771 /* ScreenRotatorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				006915D42903E7AB00B53771 /* ScreenRotator */,
+				006915BE2903E78500B53771 /* AppDelegate.swift */,
+				006915C02903E78500B53771 /* SceneDelegate.swift */,
+				00DFE9F029078BF900B6611B /* Main */,
+				004840EA290BEBFA0035DAAC /* Base */,
+				00DFE9612906B75300B6611B /* Rotator */,
+				004840E9290BDB2C0035DAAC /* Modifiers */,
+				00DFE97A2906BC4100B6611B /* Extension */,
+				00DFE9F229078C4A00B6611B /* Supporting Files */,
+			);
+			path = ScreenRotatorDemo;
+			sourceTree = "<group>";
+		};
+		006915D42903E7AB00B53771 /* ScreenRotator */ = {
+			isa = PBXGroup;
+			children = (
+				006915D52903E7AB00B53771 /* ScreenRotator.swift */,
+				001234A0290A366400D9389A /* ScreenRotatorState.swift */,
+				006915DC2903E7E700B53771 /* JPScreenRotator.h */,
+				006915DB2903E7E700B53771 /* JPScreenRotator.m */,
+			);
+			path = ScreenRotator;
+			sourceTree = "<group>";
+		};
+		00DFE9612906B75300B6611B /* Rotator */ = {
+			isa = PBXGroup;
+			children = (
+				004840E7290B74550035DAAC /* RotatorViewController.swift */,
+				00DFE9E62906BCBB00B6611B /* RotatorView.swift */,
+			);
+			path = Rotator;
+			sourceTree = "<group>";
+		};
+		00DFE97A2906BC4100B6611B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				00DFE9852906BC4100B6611B /* UIColor.Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		00DFE9F029078BF900B6611B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				00DFE9EE29078AE100B6611B /* MainWindow.swift */,
+				006915C22903E78500B53771 /* MainViewController.swift */,
+				004840F1290BF23A0035DAAC /* TestViewController.swift */,
+				00569C7E290D122D00B9CAA7 /* VideoViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		00DFE9F229078C4A00B6611B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00DFE9F329078C5600B6611B /* Resources */,
+				006915C72903E78600B53771 /* Assets.xcassets */,
+				006915CC2903E78600B53771 /* Info.plist */,
+				006915C92903E78600B53771 /* LaunchScreen.storyboard */,
+				00DFE9EC2906C09C00B6611B /* Main.storyboard */,
+				006915D72903E7B900B53771 /* ScreenRotator-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00DFE9F329078C5600B6611B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A3C91B4290E6DA100D2C3B5 /* ali.mp4 */,
+				004840EE290BEF560035DAAC /* IMG_6350.jpg */,
+				004840ED290BEF560035DAAC /* IMG_6351.jpg */,
+				00DFE9692906BBCD00B6611B /* IMG_6352.jpg */,
+				00DFE9682906BBCD00B6611B /* IMG_6353.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9F843AF3695FA8404706E74C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				814E84ED6448F0D31F46E77F /* Pods_ScreenRotatorDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEC49BDB9D381DA1D5988213 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B939DD792A8FAE93228F6C9 /* Pods-ScreenRotator.debug.xcconfig */,
+				989549011B342956D4C7BA39 /* Pods-ScreenRotator.release.xcconfig */,
+				225C191864032CC3D8008E31 /* Pods-ScreenRotatorDemo.debug.xcconfig */,
+				F275D56060194366EAB8C2AF /* Pods-ScreenRotatorDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		006915BA2903E78500B53771 /* ScreenRotatorDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 006915CF2903E78600B53771 /* Build configuration list for PBXNativeTarget "ScreenRotatorDemo" */;
+			buildPhases = (
+				409CDA7BEB0203C91DDC3D2C /* [CP] Check Pods Manifest.lock */,
+				006915B72903E78500B53771 /* Sources */,
+				006915B82903E78500B53771 /* Frameworks */,
+				006915B92903E78500B53771 /* Resources */,
+				9C65F4771B0AF242EB1EA410 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenRotatorDemo;
+			productName = ScreenRotator;
+			productReference = 006915BB2903E78500B53771 /* ScreenRotatorDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		006915B32903E78500B53771 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					006915BA2903E78500B53771 = {
+						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
+					};
+				};
+			};
+			buildConfigurationList = 006915B62903E78500B53771 /* Build configuration list for PBXProject "ScreenRotatorDemo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 006915B22903E78500B53771;
+			productRefGroup = 006915BC2903E78500B53771 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				006915BA2903E78500B53771 /* ScreenRotatorDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		006915B92903E78500B53771 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A3C91B5290E6DA100D2C3B5 /* ali.mp4 in Resources */,
+				00DFE96A2906BBCD00B6611B /* IMG_6353.jpg in Resources */,
+				00DFE96B2906BBCD00B6611B /* IMG_6352.jpg in Resources */,
+				004840F0290BEF560035DAAC /* IMG_6350.jpg in Resources */,
+				006915CB2903E78600B53771 /* LaunchScreen.storyboard in Resources */,
+				00DFE9ED2906C09C00B6611B /* Main.storyboard in Resources */,
+				004840EF290BEF560035DAAC /* IMG_6351.jpg in Resources */,
+				006915C82903E78600B53771 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		409CDA7BEB0203C91DDC3D2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScreenRotatorDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C65F4771B0AF242EB1EA410 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScreenRotatorDemo/Pods-ScreenRotatorDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScreenRotatorDemo/Pods-ScreenRotatorDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScreenRotatorDemo/Pods-ScreenRotatorDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		006915B72903E78500B53771 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DFE9E72906BCBB00B6611B /* RotatorView.swift in Sources */,
+				004840E8290B74550035DAAC /* RotatorViewController.swift in Sources */,
+				00DFE9EF29078AE100B6611B /* MainWindow.swift in Sources */,
+				001234A1290A366400D9389A /* ScreenRotatorState.swift in Sources */,
+				004840EC290BEC1E0035DAAC /* BaseViewController.swift in Sources */,
+				00DFE9CE2906BC4200B6611B /* Function.swift in Sources */,
+				00DFEA002909153500B6611B /* AnimatableModifiers.swift in Sources */,
+				006915DD2903E7E700B53771 /* JPScreenRotator.m in Sources */,
+				00DFEA012909153500B6611B /* Modifiers.swift in Sources */,
+				006915C32903E78500B53771 /* MainViewController.swift in Sources */,
+				00569C7F290D122D00B9CAA7 /* VideoViewController.swift in Sources */,
+				006915D62903E7AB00B53771 /* ScreenRotator.swift in Sources */,
+				00DFE9C22906BC4200B6611B /* UIColor.Extension.swift in Sources */,
+				006915BF2903E78500B53771 /* AppDelegate.swift in Sources */,
+				006915C12903E78500B53771 /* SceneDelegate.swift in Sources */,
+				004840F2290BF23A0035DAAC /* TestViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		006915C92903E78600B53771 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				006915CA2903E78600B53771 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		006915CD2903E78600B53771 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		006915CE2903E78600B53771 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		006915D02903E78600B53771 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 225C191864032CC3D8008E31 /* Pods-ScreenRotatorDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenRotatorDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhoujianping.ScreenRotatorDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ScreenRotatorDemo/ScreenRotator-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		006915D12903E78600B53771 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F275D56060194366EAB8C2AF /* Pods-ScreenRotatorDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH4WHYK8ZQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenRotatorDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhoujianping.ScreenRotatorDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ScreenRotatorDemo/ScreenRotator-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		006915B62903E78500B53771 /* Build configuration list for PBXProject "ScreenRotatorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				006915CD2903E78600B53771 /* Debug */,
+				006915CE2903E78600B53771 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		006915CF2903E78600B53771 /* Build configuration list for PBXNativeTarget "ScreenRotatorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				006915D02903E78600B53771 /* Debug */,
+				006915D12903E78600B53771 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 006915B32903E78500B53771 /* Project object */;
+}

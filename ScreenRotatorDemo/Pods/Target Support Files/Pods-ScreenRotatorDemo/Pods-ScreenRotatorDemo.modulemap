@@ -1,0 +1,6 @@
+framework module Pods_ScreenRotatorDemo {
+  umbrella header "Pods-ScreenRotatorDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

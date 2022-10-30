@@ -1,0 +1,26 @@
+PODS:
+  - FunnyButton (0.1.2)
+  - LookinServer (1.0.9):
+    - LookinServer/Core (= 1.0.9)
+  - LookinServer/Core (1.0.9)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - FunnyButton
+  - LookinServer
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - FunnyButton
+    - LookinServer
+    - SnapKit
+
+SPEC CHECKSUMS:
+  FunnyButton: 980633cee38018dff1bc4f12322ba4c7e353e3bf
+  LookinServer: 5d46766710ddac83ea072fa5a0351d1e74c0fd10
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: d1b5e0a0530966a75f7522a6167307c5487f3106
+
+COCOAPODS: 1.11.3
