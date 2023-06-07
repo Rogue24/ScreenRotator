@@ -5,6 +5,8 @@
 //  Created by 周健平 on 2022/10/28.
 //
 
+import Foundation
+
 class ScreenRotatorState: ObservableObject {
     @Published var orientation: ScreenRotator.Orientation = ScreenRotator.shared.orientation {
         didSet { ScreenRotator.shared.rotation(to: orientation) }

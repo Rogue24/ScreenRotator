@@ -5,6 +5,8 @@
 //  Created by 周健平 on 2022/10/28.
 //
 
+import UIKit
+
 final class ScreenRotator {
     // MARK: - 可旋转的屏幕方向
     enum Orientation: CaseIterable {
