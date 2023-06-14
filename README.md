@@ -35,7 +35,7 @@ func application(_ application: UIApplication, supportedInterfaceOrientationsFor
 }
 ```
 
-2. 不需要再重写`ViewController`的`supportedInterfaceOrientations`和`shouldAutorotate`；
+2. 不需要再重写`UIViewController`的`supportedInterfaceOrientations`和`shouldAutorotate`；
 
 3. 如需获取屏幕实时尺寸，在对应`ViewController`中重写：
 ```swift
@@ -52,6 +52,7 @@ override func viewWillTransition(to size: CGSize, with coordinator: UIViewContro
     print("view.size \(view.frame.size)") // - (428.0, 926.0)
     print("window.size \(view.window?.size ?? .zero)") // - (428.0, 926.0)
     print("window.safeAreaInsets \(view.window?.safeAreaInsets ?? .zero)") // - UIEdgeInsets(top: 47.0, left: 0.0, bottom: 34.0, right: 0.0)
+    
     // 📢 想要获取【旋转之后】的屏幕信息，需要到`Runloop`的下一个循环才能获取
     DispatchQueue.main.async {
         print("----------- 屏幕已经旋转 -----------")
@@ -165,8 +166,10 @@ var lockLandscapeWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
 当`push`或`present`一个跟当前方向不一样的新页面时，建议**先旋转**，再延时至少0.1s才打开，否则新页面的屏幕方向会错乱。例如：
 ```swift
 let testVC = UIViewController()
+
 // 1.先旋转
 ScreenRotator.shared.rotation(to: .landscapeRight)
+
 // 2.延时至少0.1s再打开
 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
     if let navCtr = self.navigationController {
