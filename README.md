@@ -1,6 +1,6 @@
 # ScreenRotator
 
-A utility class that allows for changing/maintaining screen orientation programmatically.
+A utility class that allows for rotating/locking screen orientation anytime, anywhere.
 
     Features:
         ✅ Control rotation in three directions:
@@ -14,7 +14,7 @@ A utility class that allows for changing/maintaining screen orientation programm
 
 ## Usage Examples:
 
-- Change/Maintain Screen Orientation Anytime, Anywhere
+- Rotating/Locking Screen Orientation Anytime, Anywhere
 
 ![ScreenRotator_1.gif](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_1.gif)
 
@@ -180,9 +180,19 @@ DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
 }
 ```
 
+## Installation
+
+ScreenRotator is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'ScreenRotator'
+```
+
+
 # 中文介绍
 
-屏幕旋转工具类，能通过代码随时随地改变/保持屏幕方向。
+屏幕旋转工具类，能通过代码随时随地旋转/锁定屏幕方向。
 
     Feature：
         ✅ 可控制旋转三个方向：
@@ -196,7 +206,7 @@ DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
 
 ## 使用效果
 
-- 随时随地改变/保持屏幕方向
+- 随时随地旋转/锁定屏幕方向
 
 ![ScreenRotator_1.gif](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_1.gif)
 
@@ -383,4 +393,12 @@ DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
         self.present(testVC, animated: true)
     }  
 }
+```
+
+## 安装
+
+ScreenRotator 可通过[CocoaPods](http://cocoapods.org)安装，只需添加下面一行到你的podfile：
+
+```ruby
+pod 'ScreenRotator'
 ```

@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'ScreenRotator'
   s.version          = '0.1.0'
-  s.summary          = 'A utility class that allows for changing/maintaining screen orientation programmatically.'
+  s.summary          = 'A utility class that allows for rotating/locking screen orientation anytime, anywhere.'
   
   s.description      = <<-DESC
-  A utility class that allows for changing/maintaining screen orientation programmatically.
+  A utility class that allows for rotating/locking screen orientation anytime, anywhere.
                        DESC
 
   s.homepage         = 'https://github.com/Rogue24/ScreenRotator'
