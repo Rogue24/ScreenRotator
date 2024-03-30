@@ -3,6 +3,8 @@ platform :ios, '15.0'
 target 'ScreenRotatorDemo' do
   use_frameworks!
   
+  pod 'ScreenRotator', :path => '../'
+  
   pod 'SnapKit'
   pod 'FunnyButton'
   pod 'LookinServer', :configurations => ['Debug']

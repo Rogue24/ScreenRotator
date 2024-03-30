@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		001234A1290A366400D9389A /* ScreenRotatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001234A0290A366400D9389A /* ScreenRotatorState.swift */; };
 		004840E8290B74550035DAAC /* RotatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004840E7290B74550035DAAC /* RotatorViewController.swift */; };
 		004840EC290BEC1E0035DAAC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004840EB290BEC1E0035DAAC /* BaseViewController.swift */; };
 		004840EF290BEF560035DAAC /* IMG_6351.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 004840ED290BEF560035DAAC /* IMG_6351.jpg */; };
@@ -19,8 +18,6 @@
 		006915C32903E78500B53771 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006915C22903E78500B53771 /* MainViewController.swift */; };
 		006915C82903E78600B53771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006915C72903E78600B53771 /* Assets.xcassets */; };
 		006915CB2903E78600B53771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006915C92903E78600B53771 /* LaunchScreen.storyboard */; };
-		006915D62903E7AB00B53771 /* ScreenRotator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006915D52903E7AB00B53771 /* ScreenRotator.swift */; };
-		006915DD2903E7E700B53771 /* JPScreenRotator.m in Sources */ = {isa = PBXBuildFile; fileRef = 006915DB2903E7E700B53771 /* JPScreenRotator.m */; };
 		00DFE96A2906BBCD00B6611B /* IMG_6353.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00DFE9682906BBCD00B6611B /* IMG_6353.jpg */; };
 		00DFE96B2906BBCD00B6611B /* IMG_6352.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00DFE9692906BBCD00B6611B /* IMG_6352.jpg */; };
 		00DFE9C22906BC4200B6611B /* UIColor.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DFE9852906BC4100B6611B /* UIColor.Extension.swift */; };
@@ -35,7 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		001234A0290A366400D9389A /* ScreenRotatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRotatorState.swift; sourceTree = "<group>"; };
 		004840E7290B74550035DAAC /* RotatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatorViewController.swift; sourceTree = "<group>"; };
 		004840EB290BEC1E0035DAAC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		004840ED290BEF560035DAAC /* IMG_6351.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6351.jpg; sourceTree = "<group>"; };
@@ -49,10 +45,8 @@
 		006915C72903E78600B53771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		006915CA2903E78600B53771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		006915CC2903E78600B53771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		006915D52903E7AB00B53771 /* ScreenRotator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRotator.swift; sourceTree = "<group>"; };
 		006915D72903E7B900B53771 /* ScreenRotator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScreenRotator-Bridging-Header.h"; sourceTree = "<group>"; };
-		006915DB2903E7E700B53771 /* JPScreenRotator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPScreenRotator.m; sourceTree = "<group>"; };
-		006915DC2903E7E700B53771 /* JPScreenRotator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPScreenRotator.h; sourceTree = "<group>"; };
+		00B226AC2BB882FA008D5B1E /* ScreenRotator.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = ScreenRotator.podspec; path = ../ScreenRotator.podspec; sourceTree = "<group>"; };
 		00DFE9682906BBCD00B6611B /* IMG_6353.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6353.jpg; sourceTree = "<group>"; };
 		00DFE9692906BBCD00B6611B /* IMG_6352.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6352.jpg; sourceTree = "<group>"; };
 		00DFE9852906BC4100B6611B /* UIColor.Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.Extension.swift; sourceTree = "<group>"; };
@@ -104,6 +98,7 @@
 		006915B22903E78500B53771 = {
 			isa = PBXGroup;
 			children = (
+				00B226AC2BB882FA008D5B1E /* ScreenRotator.podspec */,
 				1A3C91D0290E941E00D2C3B5 /* README.md */,
 				006915BD2903E78500B53771 /* ScreenRotatorDemo */,
 				006915BC2903E78500B53771 /* Products */,
@@ -123,7 +118,6 @@
 		006915BD2903E78500B53771 /* ScreenRotatorDemo */ = {
 			isa = PBXGroup;
 			children = (
-				006915D42903E7AB00B53771 /* ScreenRotator */,
 				006915BE2903E78500B53771 /* AppDelegate.swift */,
 				006915C02903E78500B53771 /* SceneDelegate.swift */,
 				00DFE9F029078BF900B6611B /* Main */,
@@ -134,17 +128,6 @@
 				00DFE9F229078C4A00B6611B /* Supporting Files */,
 			);
 			path = ScreenRotatorDemo;
-			sourceTree = "<group>";
-		};
-		006915D42903E7AB00B53771 /* ScreenRotator */ = {
-			isa = PBXGroup;
-			children = (
-				006915D52903E7AB00B53771 /* ScreenRotator.swift */,
-				001234A0290A366400D9389A /* ScreenRotatorState.swift */,
-				006915DC2903E7E700B53771 /* JPScreenRotator.h */,
-				006915DB2903E7E700B53771 /* JPScreenRotator.m */,
-			);
-			path = ScreenRotator;
 			sourceTree = "<group>";
 		};
 		00DFE9612906B75300B6611B /* Rotator */ = {
@@ -343,15 +326,12 @@
 				00DFE9E72906BCBB00B6611B /* RotatorView.swift in Sources */,
 				004840E8290B74550035DAAC /* RotatorViewController.swift in Sources */,
 				00DFE9EF29078AE100B6611B /* MainWindow.swift in Sources */,
-				001234A1290A366400D9389A /* ScreenRotatorState.swift in Sources */,
 				004840EC290BEC1E0035DAAC /* BaseViewController.swift in Sources */,
 				00DFE9CE2906BC4200B6611B /* Function.swift in Sources */,
 				00DFEA002909153500B6611B /* AnimatableModifiers.swift in Sources */,
-				006915DD2903E7E700B53771 /* JPScreenRotator.m in Sources */,
 				00DFEA012909153500B6611B /* Modifiers.swift in Sources */,
 				006915C32903E78500B53771 /* MainViewController.swift in Sources */,
 				00569C7F290D122D00B9CAA7 /* VideoViewController.swift in Sources */,
-				006915D62903E7AB00B53771 /* ScreenRotator.swift in Sources */,
 				00DFE9C22906BC4200B6611B /* UIColor.Extension.swift in Sources */,
 				006915BF2903E78500B53771 /* AppDelegate.swift in Sources */,
 				006915C12903E78500B53771 /* SceneDelegate.swift in Sources */,

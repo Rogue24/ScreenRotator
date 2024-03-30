@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-ScreenRotatorDemo/Pods-ScreenRotatorDemo-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/FunnyButton/FunnyButton.framework
 ${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework
+${BUILT_PRODUCTS_DIR}/ScreenRotator/ScreenRotator.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

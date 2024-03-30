@@ -8,6 +8,7 @@
 import UIKit
 import AVKit
 import SnapKit
+import ScreenRotator
 
 class PlayerView: UIView {
     override class var layerClass: AnyClass { AVPlayerLayer.self }

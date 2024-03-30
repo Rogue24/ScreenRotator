@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import ScreenRotator
 
 class BaseViewController: UIViewController {
     private let bgImgView = UIImageView()

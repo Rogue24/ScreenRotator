@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ScreenRotator
 
 struct RotatorView: View {
     @StateObject var viewState: RotatorViewState

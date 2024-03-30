@@ -3,11 +3,13 @@ PODS:
   - LookinServer (1.0.9):
     - LookinServer/Core (= 1.0.9)
   - LookinServer/Core (1.0.9)
+  - ScreenRotator (0.1.0)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
   - FunnyButton
   - LookinServer
+  - ScreenRotator (from `../`)
   - SnapKit
 
 SPEC REPOS:
@@ -16,11 +18,16 @@ SPEC REPOS:
     - LookinServer
     - SnapKit
 
+EXTERNAL SOURCES:
+  ScreenRotator:
+    :path: "../"
+
 SPEC CHECKSUMS:
   FunnyButton: 980633cee38018dff1bc4f12322ba4c7e353e3bf
   LookinServer: 5d46766710ddac83ea072fa5a0351d1e74c0fd10
+  ScreenRotator: 24b36bf53045cc00819d526c454c478fced7a5a9
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: d1b5e0a0530966a75f7522a6167307c5487f3106
+PODFILE CHECKSUM: b182cf5cddc3c65616d48ed31c855c8522efa157
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.15.2

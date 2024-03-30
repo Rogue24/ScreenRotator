@@ -7,6 +7,7 @@
 
 import UIKit
 import FunnyButton
+import ScreenRotator
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

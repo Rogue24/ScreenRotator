@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import FunnyButton
+import ScreenRotator
 
 class MainViewController: BaseViewController {
     

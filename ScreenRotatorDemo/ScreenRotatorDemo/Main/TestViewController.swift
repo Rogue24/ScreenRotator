@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import ScreenRotator
 
 class TestViewController: BaseViewController {
     

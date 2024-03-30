@@ -7,20 +7,21 @@
 
 import Foundation
 
-class ScreenRotatorState: ObservableObject {
-    @Published var orientation: ScreenRotator.Orientation = ScreenRotator.shared.orientation {
+@available(iOS 13.0, *)
+public class ScreenRotatorState: ObservableObject {
+    @Published public var orientation: ScreenRotator.Orientation = ScreenRotator.shared.orientation {
         didSet { ScreenRotator.shared.rotation(to: orientation) }
     }
     
-    @Published var isLockOrientation: Bool = ScreenRotator.shared.isLockOrientationWhenDeviceOrientationDidChange {
+    @Published public var isLockOrientation: Bool = ScreenRotator.shared.isLockOrientationWhenDeviceOrientationDidChange {
         didSet { ScreenRotator.shared.isLockOrientationWhenDeviceOrientationDidChange = isLockOrientation }
     }
     
-    @Published var isLockLandscape: Bool = ScreenRotator.shared.isLockLandscapeWhenDeviceOrientationDidChange {
+    @Published public var isLockLandscape: Bool = ScreenRotator.shared.isLockLandscapeWhenDeviceOrientationDidChange {
         didSet { ScreenRotator.shared.isLockLandscapeWhenDeviceOrientationDidChange = isLockLandscape }
     }
     
-    init() {
+    public init() {
         NotificationCenter.default.addObserver(self, selector: #selector(orientationDidChange),
                                                name: ScreenRotator.orientationDidChangeNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(lockOrientationWhenDeviceOrientationDidChange),
@@ -29,19 +30,19 @@ class ScreenRotatorState: ObservableObject {
                                                name: ScreenRotator.lockLandscapeWhenDeviceOrientationDidChangeNotification, object: nil)
     }
     
-    @objc func orientationDidChange() {
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc private func orientationDidChange() {
         orientation = ScreenRotator.shared.orientation
     }
     
-    @objc func lockOrientationWhenDeviceOrientationDidChange() {
+    @objc private func lockOrientationWhenDeviceOrientationDidChange() {
         isLockOrientation = ScreenRotator.shared.isLockOrientationWhenDeviceOrientationDidChange
     }
     
-    @objc func lockLandscapeWhenDeviceOrientationDidChange() {
+    @objc private func lockLandscapeWhenDeviceOrientationDidChange() {
         isLockLandscape = ScreenRotator.shared.isLockLandscapeWhenDeviceOrientationDidChange
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
     }
 }

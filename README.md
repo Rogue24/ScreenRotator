@@ -1,5 +1,187 @@
 # ScreenRotator
 
+A utility class that allows for changing/maintaining screen orientation programmatically.
+
+    Features:
+        ✅ Control rotation in three directions:
+            - Portrait: Device held upright.
+            - Landscape: Device rotated with the top towards the left.
+            - Landscape: Device rotated with the top towards the right.
+        ✅ Control whether screen orientation changes automatically with device movement.
+        ✅ Compatible with iOS 16.
+        ✅ Compatible with OC & Swift & SwiftUI.
+        ✅ Simple and easy-to-use API.
+
+## Usage Examples:
+
+- Change/Maintain Screen Orientation Anytime, Anywhere
+
+![ScreenRotator_1.gif](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_1.gif)
+
+- `push` or `present` a new page with a different orientation than the current one
+
+![ScreenRotator_2.gif](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_2.gif)
+
+- Switching between portrait and landscape modes in videos
+
+![ScreenRotator_3.gif](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_3.gif)
+
+## Prerequisites:
+
+1. To globally control screen orientation with the singleton `ScreenRotator.shared`, override the following method in `AppDelegate`:
+
+```swift
+func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+    return ScreenRotator.shared.orientationMask
+}
+```
+
+2. No need to override `supportedInterfaceOrientations` and `shouldAutorotate` in `UIViewController` anymore.
+
+3. If you need to obtain real-time screen dimensions, override the following method in the respective `ViewController`:
+
+```swift
+override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    // Implementation example provided in the document
+}
+```
+
+4. If you need to listen for screen rotation, use `ScreenRotator.orientationDidChangeNotification` notification provided by this utility class or implement using closure:
+
+```swift
+ScreenRotator.shared.orientationMaskDidChange = { orientationMask in 
+    // Implementation example provided in the document
+}
+```
+
+## API:
+
+Methods available through the singleton `ScreenRotator.shared`:
+
+1. Rotate to a specific orientation:
+
+```swift
+func rotation(to orientation: Orientation)
+```
+
+2. Rotate to portrait orientation:
+
+```swift
+func rotationToPortrait()
+```
+
+3. Rotate to landscape orientation (with the top towards the left if screen lock is disabled):
+
+```swift
+func rotationToLandscape()
+```
+
+4. Rotate to landscape orientation with the top towards the left:
+
+```swift
+func rotationToLandscapeLeft()
+```
+
+5. Rotate to landscape orientation with the top towards the right:
+
+```swift
+func rotationToLandscapeRight()
+```
+
+6. Toggle between portrait and landscape orientations:
+
+```swift
+func toggleOrientation()
+```
+
+7. Check if the device is in portrait orientation:
+
+```swift
+var isPortrait: Bool
+```
+
+8. Get the current screen orientation (ScreenRotator.Orientation):
+
+```swift
+var orientation: Orientation
+```
+
+9. Lock/unlock screen orientation changes based on device rotation:
+
+```swift
+var isLockOrientationWhenDeviceOrientationDidChange: Bool 
+```
+
+10. Lock/unlock landscape orientation changes based on device rotation:
+
+```swift
+var isLockLandscapeWhenDeviceOrientationDidChange: Bool 
+```
+
+11. Closure to handle changes in screen orientation:
+
+```swift
+var orientationMaskDidChange: ((_ orientationMask: UIInterfaceOrientationMask) -> ())?
+```
+
+12. Closure to handle changes in lock status for screen orientation:
+
+```swift
+var lockOrientationWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
+```
+
+13. Closure to handle changes in lock status for landscape orientation:
+
+```swift
+var lockLandscapeWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
+```
+
+## Observable Notifications:
+
+1. Notification for changes in screen orientation:
+
+- `ScreenRotator.orientationDidChangeNotification`
+    - object: `orientationMask` (UIInterfaceOrientationMask)
+
+2. Notification for changes in lock status for screen orientation:
+
+- `ScreenRotator.lockOrientationWhenDeviceOrientationDidChangeNotification`
+    - object: `isLockOrientationWhenDeviceOrientationDidChange` (Bool)
+
+3. Notification for changes in lock status for landscape orientation:
+
+- `ScreenRotator.lockLandscapeWhenDeviceOrientationDidChangeNotification`
+    - object: `isLockLandscapeWhenDeviceOrientationDidChange` (Bool)
+
+## Compatibility with OC & SwiftUI:
+
+- Objective-C: Use `JPScreenRotator`, which is specifically written in OC, with the same usage as `ScreenRotator`.
+
+- SwiftUI: Use `ScreenRotatorState` to update state.
+  - Refer to the `RotatorView` in the Demo for usage details.
+
+## Tips:
+
+When `push` or `present` a new page with a different orientation than the current one, it is recommended to **rotate first** and then open after a delay of at least 0.1s to avoid screen orientation confusion. Example:
+
+```swift
+let testVC = UIViewController()
+
+// 1. Rotate first
+ScreenRotator.shared.rotation(to: .landscapeRight)
+
+// 2. Open after a delay of at least 0.1s
+DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+    if let navCtr = self.navigationController {
+        navCtr.pushViewController(testVC, animated: true)
+    } else {
+        self.present(testVC, animated: true)
+    }  
+}
+```
+
+# 中文介绍
+
 屏幕旋转工具类，能通过代码随时随地改变/保持屏幕方向。
 
     Feature：
@@ -29,6 +211,7 @@
 ## 使用前提
 
 1. 让单例`ScreenRotator.shared`**全局控制**屏幕方向，首先得在`AppDelegate`中重写：
+
 ```swift
 func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
     return ScreenRotator.shared.orientationMask
@@ -38,6 +221,7 @@ func application(_ application: UIApplication, supportedInterfaceOrientationsFor
 2. 不需要再重写`UIViewController`的`supportedInterfaceOrientations`和`shouldAutorotate`；
 
 3. 如需获取屏幕实时尺寸，在对应`ViewController`中重写：
+
 ```swift
 override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
     // 🌰🌰🌰：竖屏 --> 横屏
@@ -65,6 +249,7 @@ override func viewWillTransition(to size: CGSize, with coordinator: UIViewContro
 ```
 
 4. 如需监听屏幕的旋转，**不用再监听`UIDevice.orientationDidChangeNotification`通知**，而是监听该工具类提供的`ScreenRotator.orientationDidChangeNotification`通知。或者通过闭包的形式实现监听：
+
 ```swift
 ScreenRotator.shard.orientationMaskDidChange = { orientationMask in 
     // 更新`FunnyButton`所属`window`的方向
@@ -77,80 +262,99 @@ ScreenRotator.shard.orientationMaskDidChange = { orientationMask in
 全局使用单例`ScreenRotator.shared`调用：
 
 1. 旋转至目标方向
+
 ```swift
 func rotation(to orientation: Orientation)
 ```
 
 2. 旋转至竖屏
+
 ```swift
 func rotationToPortrait()
 ```
 
 3. 旋转至横屏（如果锁定了屏幕，则转向手机头在左边）
+
 ```swift
 func rotationToLandscape()
 ```
+
 4. 旋转至横屏（手机头在左边）
+
 ```swift
 func rotationToLandscapeLeft()
 ```
+
 5. 旋转至横屏（手机头在右边）
+
 ```swift
 func rotationToLandscapeRight()
 ```
+
 6. 横竖屏切换
+
 ```swift
 func toggleOrientation()
 ```
 
 7. 是否正在竖屏
+
 ```swift
 var isPortrait: Bool
 ```
 
 8. 当前屏幕方向（ScreenRotator.Orientation）
+
 ```swift
 var orientation: Orientation
 ```
 
 9. 是否锁定屏幕方向（当控制中心禁止了竖屏锁定，为`true`则不会【随手机摆动自动改变】屏幕方向）
+
 ```swift
 var isLockOrientationWhenDeviceOrientationDidChange = true 
 // PS：即便锁定了（`true`）也能通过该工具类去旋转屏幕方向
 ```
 
 10. 是否锁定横屏方向（当控制中心禁止了竖屏锁定，为`true`则【仅限横屏的两个方向会随手机摆动自动改变】屏幕方向）
+
 ```swift
 var isLockLandscapeWhenDeviceOrientationDidChange = false 
 // PS：即便锁定了（`true`）也能通过该工具类去旋转屏幕方向
 ```
 
-11. 屏幕方向发生改变的回调
+11. <屏幕方向>发生改变的回调闭包
+
 ```swift
 var orientationMaskDidChange: ((_ orientationMask: UIInterfaceOrientationMask) -> ())?
 ```
 
-12. 锁定屏幕方向发生改变的回调
+12. <是否锁定屏幕方向>发生改变的回调闭包
+
 ```swift
 var lockOrientationWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
 ```
 
-13. 锁定横屏方向发生改变的回调
+13. <是否锁定横屏方向>发生改变的回调闭包
+
 ```swift
 var lockLandscapeWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
 ```
 
 ## 可监听的通知
 
-1. 屏幕方向发生改变的通知：
+1. <屏幕方向>发生改变的通知：
+
 - `ScreenRotator.orientationDidChangeNotification`
     - object: `orientationMask`（UIInterfaceOrientationMask）
 
-2. 锁定屏幕方向发生改变的通知：
+2. <是否锁定屏幕方向>发生改变的通知：
+
 - `ScreenRotator.lockOrientationWhenDeviceOrientationDidChangeNotification`
     - object: `isLockOrientationWhenDeviceOrientationDidChange`（Bool）
 
-3. 锁定横屏方向发生改变的通知：
+3. <是否锁定横屏方向>发生改变的通知：
+
 - `ScreenRotator.lockLandscapeWhenDeviceOrientationDidChangeNotification`
     - object: `isLockLandscapeWhenDeviceOrientationDidChange`（Bool）
 
@@ -164,6 +368,7 @@ var lockLandscapeWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
 ## Tips
 
 当`push`或`present`一个跟当前方向不一样的新页面时，建议**先旋转**，再延时至少0.1s才打开，否则新页面的屏幕方向会错乱。例如：
+
 ```swift
 let testVC = UIViewController()
 

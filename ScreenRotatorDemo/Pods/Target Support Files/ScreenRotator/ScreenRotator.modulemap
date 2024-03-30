@@ -1,0 +1,6 @@
+framework module ScreenRotator {
+  umbrella header "ScreenRotator-umbrella.h"
+
+  export *
+  module * { export * }
+}
