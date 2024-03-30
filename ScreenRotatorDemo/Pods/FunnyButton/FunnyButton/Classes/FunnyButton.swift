@@ -57,7 +57,7 @@ public class FunnyButton: UIButton {
     
     
     init() {
-        let scale = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height) / 375.0
+        let scale = min(min(UIScreen.main.bounds.width, UIScreen.main.bounds.height) / 375.0, 1.7)
         let wh = 55 * scale
         super.init(frame: CGRect(origin: FunnyButton.startPoint, size: CGSize(width: wh, height: wh)))
         _setupUI()
@@ -155,6 +155,8 @@ private extension FunnyButton {
             return
         }
         
+        guard let rootVC = window?.rootViewController else { return }
+        
         let alertCtr = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         for i in 0 ..< actions.count {
             let action = actions[i]
@@ -163,7 +165,27 @@ private extension FunnyButton {
             )
         }
         alertCtr.addAction(UIAlertAction(title: "取消", style: .cancel))
-        window?.rootViewController?.present(alertCtr, animated: true)
+        
+        if let popover = alertCtr.popoverPresentationController {
+            let frame = convert(bounds, to: rootVC.view)
+            
+            var origin = CGPoint(x: 0, y: frame.midY)
+            var arrowDirections: UIPopoverArrowDirection = .any
+            
+            if frame.midX < rootVC.view.frame.midX {
+                origin.x = frame.maxX + 12
+                arrowDirections = .left
+            } else {
+                origin.x = frame.origin.x - 12
+                arrowDirections = .right
+            }
+            
+            popover.sourceView = rootVC.view
+            popover.sourceRect = CGRect(origin: origin, size: .zero)
+            popover.permittedArrowDirections = arrowDirections
+        }
+        
+        rootVC.present(alertCtr, animated: true)
     }
 }
 

@@ -1,8 +1,8 @@
 {
   "name": "ScreenRotator",
   "version": "0.1.0",
-  "summary": "A utility class that allows for changing/maintaining screen orientation programmatically.",
-  "description": "A utility class that allows for changing/maintaining screen orientation programmatically.",
+  "summary": "A utility class that allows for rotating/locking screen orientation anytime, anywhere.",
+  "description": "A utility class that allows for rotating/locking screen orientation anytime, anywhere.",
   "homepage": "https://github.com/Rogue24/ScreenRotator",
   "license": {
     "type": "MIT",

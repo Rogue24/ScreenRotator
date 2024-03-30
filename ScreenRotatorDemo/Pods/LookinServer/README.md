@@ -19,16 +19,19 @@ Never integrate LookinServer in Release building configuration.
 ## via Swift Package Manager:
 `https://github.com/QMUI/LookinServer/`
 
-> **Warning**
-Lookin will not display property name of a Swift class via SPM. Because the implementation of the feature needs to mix Objective-C and Swift files which is not supported by SPM. If you know how to deal with it, please contact me or create pull request. 
-
 # Repository
 LookinServer: https://github.com/QMUI/LookinServer
 
 macOS app: https://github.com/hughkli/Lookin/
 
-# Development
-It's hard for me to spend much time on this free open-source side project. The feature developlment or bugfix may be really slow.
+# Tips
+- How to display custom information in Lookin: https://bytedance.larkoffice.com/docx/TRridRXeUoErMTxs94bcnGchnlb
+- How to display more member variables in Lookin: https://bytedance.larkoffice.com/docx/CKRndHqdeoub11xSqUZcMlFhnWe
+- How to turn on Swift optimization for Lookin: https://bytedance.larkoffice.com/docx/GFRLdzpeKoakeyxvwgCcZ5XdnTb
+- Documentation Collection: https://bytedance.larkoffice.com/docx/Yvv1d57XQoe5l0xZ0ZRc0ILfnWb
+
+# Acknowledgements
+https://qxh1ndiez2w.feishu.cn/docx/YIFjdE4gIolp3hxn1tGckiBxnWf
 
 ---
 # 简介
@@ -51,8 +54,6 @@ Lookin 可以查看与修改 iOS App 里的 UI 对象，类似于 Xcode 自带�
 
 ## 通过 Swift Package Manager:
 `https://github.com/QMUI/LookinServer/`
-> **Warning**
-通过 SPM 方式集成时，Lookin 将无法显示 Swift 成员属性的变量名。因为实现这个 Feature 需要在 LookinServer 中引入 Swift 文件，但 SPM 似乎不支持 OC 和 Swift 文件混在一起（如果你知道如何解决，可以联系我，或者直接提 Pull Request）。
 
 # 源代码仓库
 
@@ -60,5 +61,11 @@ iOS 端 LookinServer：https://github.com/QMUI/LookinServer
 
 macOS 端软件：https://github.com/hughkli/Lookin/
 
-# 开发节奏
-由于在公司里的正职实在是太忙了，导致我很难在这个开源免费项目上花费太多时间和精力，所以新功能开发和 Bugfix 可能都比较慢，请见谅。
+# 技巧
+- 如何在 Lookin 中展示自定义信息: https://bytedance.larkoffice.com/docx/TRridRXeUoErMTxs94bcnGchnlb
+- 如何在 Lookin 中展示更多成员变量: https://bytedance.larkoffice.com/docx/CKRndHqdeoub11xSqUZcMlFhnWe
+- 如何为 Lookin 开启 Swift 优化: https://bytedance.larkoffice.com/docx/GFRLdzpeKoakeyxvwgCcZ5XdnTb
+- 文档汇总：https://bytedance.larkoffice.com/docx/Yvv1d57XQoe5l0xZ0ZRc0ILfnWb
+
+# 鸣谢
+https://qxh1ndiez2w.feishu.cn/docx/YIFjdE4gIolp3hxn1tGckiBxnWf

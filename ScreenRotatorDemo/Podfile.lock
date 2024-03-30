@@ -1,10 +1,10 @@
 PODS:
-  - FunnyButton (0.1.2)
-  - LookinServer (1.0.9):
-    - LookinServer/Core (= 1.0.9)
-  - LookinServer/Core (1.0.9)
+  - FunnyButton (0.1.5)
+  - LookinServer (1.2.7):
+    - LookinServer/Core (= 1.2.7)
+  - LookinServer/Core (1.2.7)
   - ScreenRotator (0.1.0)
-  - SnapKit (5.6.0)
+  - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - FunnyButton
@@ -23,10 +23,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FunnyButton: 980633cee38018dff1bc4f12322ba4c7e353e3bf
-  LookinServer: 5d46766710ddac83ea072fa5a0351d1e74c0fd10
-  ScreenRotator: 24b36bf53045cc00819d526c454c478fced7a5a9
-  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  FunnyButton: e8202ece176aaa5f7ead1e5c8eb0f29d28fc5ad4
+  LookinServer: 36f1a0ad280de34b9794cf8825867fcc2dd93e75
+  ScreenRotator: 94d1496f0c3bc3ce87ca80705f2f9b10782628c0
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
 PODFILE CHECKSUM: b182cf5cddc3c65616d48ed31c855c8522efa157
 
