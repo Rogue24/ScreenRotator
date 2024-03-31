@@ -42,7 +42,27 @@ func application(_ application: UIApplication, supportedInterfaceOrientationsFor
 
 ```swift
 override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-    // Implementation example provided in the document
+    // Example: Portrait --> Landscape
+    
+    // When the screen rotates, this function is automatically triggered by the system, and `size` represents the screen size after the rotation.
+    print("size \(size)") // --- (926.0, 428.0)
+    // Alternatively, you can also obtain the screen size after rotation through `UIScreen`.
+    print("mainScreen \(UIScreen.main.bounds.size)") // --- (926.0, 428.0)
+
+    // 📢 Note: If you attempt to retrieve screen-related information using `self.xxx` (such as `self.view.frame`), the size obtained at this point is still the size before the rotation.
+    print("----------- Screen will rotate -----------")
+    print("view.size \(view.frame.size)") // - (428.0, 926.0)
+    print("window.size \(view.window?.size ?? .zero)") // - (428.0, 926.0)
+    print("window.safeAreaInsets \(view.window?.safeAreaInsets ?? .zero)") // - UIEdgeInsets(top: 47.0, left: 0.0, bottom: 34.0, right: 0.0)
+    
+    // 📢 To obtain screen information after rotation, you need to wait until the next iteration of the `Runloop`.
+    DispatchQueue.main.async {
+        print("----------- Screen has rotated -----------")
+        print("view.size \(self.view.frame.size)") // - (926.0, 428.0)
+        print("window.size \(self.view.window?.size ?? .zero)") // - (926.0, 428.0)
+        print("window.safeAreaInsets \(self.view.window?.safeAreaInsets ?? .zero)") // - UIEdgeInsets(top: 0.0, left: 47.0, bottom: 21.0, right: 47.0)
+        print("==================================")
+    }
 }
 ```
 
@@ -50,7 +70,8 @@ override func viewWillTransition(to size: CGSize, with coordinator: UIViewContro
 
 ```swift
 ScreenRotator.shared.orientationMaskDidChange = { orientationMask in 
-    // Implementation example provided in the document
+    // Update the orientation of the FunnyButton belonging to the window.
+    FunnyButton.orientationMask = orientationMask
 }
 ```
 
