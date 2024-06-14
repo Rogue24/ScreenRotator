@@ -76,7 +76,7 @@ ScreenRotator.shared.orientationMaskDidChange = { orientationMask in
 }
 ```
 
-5. For iPad App, you need to go to `TARGETS` -> `General` -> `Deployment Info` -> enable `Requires full screen` to use code to rotate the screen:
+5. For **iPad App**, you need to go to `TARGETS` -> `General` -> `Deployment Info` -> enable `Requires full screen` to use code to rotate the screen:
 
 ![ScreenRotator_4.jpg](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_4.jpg)
 
@@ -308,7 +308,7 @@ ScreenRotator.shard.orientationMaskDidChange = { orientationMask in
 }
 ```
 
-5. 如果是`iPad App`，需要去`TARGETS` -> `General` -> `Deployment Info` -> 打开`Requires full screen`，方可使用代码旋转屏幕：
+5. 如果是**iPad App**，需要去`TARGETS` -> `General` -> `Deployment Info` -> 打开`Requires full screen`，方可使用代码旋转屏幕：
 
 ![ScreenRotator_4.jpg](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_4.jpg)
 
