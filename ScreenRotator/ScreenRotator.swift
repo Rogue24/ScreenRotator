@@ -26,9 +26,10 @@ public final class ScreenRotator {
     
     // MARK: - 可旋转的屏幕方向【枚举】
     public enum Orientation: CaseIterable {
-        case portrait       // 竖屏 手机头在上边
-        case landscapeLeft  // 横屏 手机头在左边
-        case landscapeRight // 横屏 手机头在右边
+        case portrait           // 竖屏 手机头在上边
+        case portraitUpsideDown // 竖屏 手机头在下边
+        case landscapeLeft      // 横屏 手机头在左边
+        case landscapeRight     // 横屏 手机头在右边
     }
     
     // MARK: - 属性
@@ -43,6 +44,14 @@ public final class ScreenRotator {
         didSet {
             guard orientationMask != oldValue else { return }
             publishOrientationMaskDidChange()
+        }
+    }
+    
+    /// 是否允许转向`竖屏-手机头在下边`的方向（默认不允许）
+    public var isAllowPortraitUpsideDown: Bool = false {
+        didSet {
+            guard !isAllowPortraitUpsideDown, orientationMask == .portraitUpsideDown else { return }
+            rotationToPortrait()
         }
     }
     
@@ -64,7 +73,7 @@ public final class ScreenRotator {
         }
     }
     
-    /// 是否正在竖屏
+    /// 是否正在竖屏（手机头在上边）
     public var isPortrait: Bool { orientationMask == .portrait }
     
     /// 当前屏幕方向（`UIInterfaceOrientationMask` --> `ScreenRotator.Orientation`）
@@ -81,9 +90,13 @@ public final class ScreenRotator {
                 return .landscapeLeft
             case .landscapeRight:
                 return .landscapeRight
+            case .portraitUpsideDown:
+                return .portraitUpsideDown
             default:
                 return .portrait
             }
+        case .portraitUpsideDown:
+            return .portraitUpsideDown
         default:
             return .portrait
         }
@@ -126,6 +139,8 @@ private extension ScreenRotator {
             return .landscapeLeft
         case .landscape:
             return .landscapeLeft
+        case .portraitUpsideDown:
+            return .portraitUpsideDown
         default:
             return .portrait
         }
@@ -137,6 +152,8 @@ private extension ScreenRotator {
             return .landscapeRight
         case .landscapeRight:
             return .landscapeLeft
+        case .portraitUpsideDown:
+            return .portraitUpsideDown
         default:
             return .portrait
         }
@@ -175,7 +192,10 @@ private extension ScreenRotator {
                 // 例如Demo中至少有两个`window`：第一个是app主体的`window`，第二个则是`FunnyButton`所在的`window`，
                 // 所以需要遍历全部`window`进行旋转，保证全部`window`都能保持一致的屏幕方向。
                 
-                // `iOS16`之后`attemptRotationToDeviceOrientation`建议不再使用（虽然还起效），
+                // 📢【注意】要在全部`window`调用`requestGeometryUpdate`之前，
+                // 先对`vc`调用`attemptRotationToDeviceOrientation`，否则会报错（虽然对屏幕旋转没影响）：
+                // ↓↓↓
+                // PS:`iOS16`之后`attemptRotationToDeviceOrientation`建议不再使用（虽然还起效），
                 // 而是调用`setNeedsUpdateOfSupportedInterfaceOrientations`进行屏幕旋转。
                 for window in windowScene.windows {
                     guard let rootViewController = window.rootViewController else { continue }
@@ -184,9 +204,7 @@ private extension ScreenRotator {
                     // 若需要全部控制器都执行`setNeedsUpdateOfSupportedInterfaceOrientations`，可调用该函数：
                     // Self.setNeedsUpdateOfSupportedInterfaceOrientations(rootViewController, nil)
                 }
-                
-                //【注意】要在全部`window`调用`requestGeometryUpdate`之前，先对`vc`调用`attemptRotationToDeviceOrientation`，
-                // 否则会报错（虽然对屏幕旋转没影响）。
+                // ↓↓↓
                 for window in windowScene.windows {
                     window.windowScene?.requestGeometryUpdate(geometryPreferences)
                 }
@@ -224,8 +242,12 @@ private extension ScreenRotator {
         
         let deviceOrientation = UIDevice.current.orientation
         switch deviceOrientation {
-        case .unknown, .portraitUpsideDown, .faceUp, .faceDown:
+        case .unknown, .faceUp, .faceDown:
             return
+        case .portraitUpsideDown:
+            if !isAllowPortraitUpsideDown {
+                return
+            }
         default:
             break
         }
@@ -272,22 +294,33 @@ public extension ScreenRotator {
             orientationMask = .landscapeRight
         case .landscapeRight:
             orientationMask = .landscapeLeft
+        case .portraitUpsideDown:
+            if !isAllowPortraitUpsideDown {
+                return
+            }
+            orientationMask = .portraitUpsideDown
         default:
             orientationMask = .portrait
         }
         rotation(to: orientationMask)
     }
     
-    /// 旋转至竖屏
+    /// 旋转至竖屏（手机头在上边）
     func rotationToPortrait() {
         rotation(to: UIInterfaceOrientationMask.portrait)
+    }
+    
+    /// 旋转至竖屏（手机头在下边）
+    func rotationToPortraitUpsideDown() {
+        guard isAllowPortraitUpsideDown else { return }
+        rotation(to: UIInterfaceOrientationMask.portraitUpsideDown)
     }
     
     /// 旋转至横屏（如果锁定了屏幕，则转向手机头在左边）
     func rotationToLandscape() {
         guard isEnabled else { return }
         var orientationMask = Self.convertDeviceOrientationToInterfaceOrientationMask(UIDevice.current.orientation)
-        if orientationMask == .portrait {
+        if orientationMask == .portrait || orientationMask == .portraitUpsideDown {
             orientationMask = .landscapeRight
         }
         rotation(to: orientationMask)
@@ -308,7 +341,7 @@ public extension ScreenRotator {
         guard isEnabled else { return }
         var orientationMask = Self.convertDeviceOrientationToInterfaceOrientationMask(UIDevice.current.orientation)
         if orientationMask == self.orientationMask {
-            orientationMask = self.orientationMask == .portrait ? .landscapeRight : .portrait
+            orientationMask = (self.orientationMask == .portrait || self.orientationMask == .portraitUpsideDown) ? .landscapeRight : .portrait
         }
         rotation(to: orientationMask)
     }

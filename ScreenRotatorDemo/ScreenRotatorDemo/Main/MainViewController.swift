@@ -23,10 +23,10 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let btn = UIButton(type: .custom)
-        btn.addTarget(self, action: #selector(goShowVC), for: .touchUpInside)
-        view.addSubview(btn)
-        btn.snp.makeConstraints { $0.edges.equalToSuperview() }
+//        let btn = UIButton(type: .custom)
+//        btn.addTarget(self, action: #selector(goShowVC), for: .touchUpInside)
+//        view.addSubview(btn)
+//        btn.snp.makeConstraints { $0.edges.equalToSuperview() }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,8 +41,15 @@ class MainViewController: BaseViewController {
         }
     }
     
-    @objc func goShowVC() {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let point = touch.location(in: view)
+        
         let alertCtr = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        alertCtr.addAction(UIAlertAction(title: ScreenRotator.shared.isAllowPortraitUpsideDown ? "Disable PortraitUpsideDown" : "Allow PortraitUpsideDown", style: .default) { _ in
+            ScreenRotator.shared.isAllowPortraitUpsideDown.toggle()
+        })
         
         alertCtr.addAction(UIAlertAction(title: "Push Portrait Page", style: .default) { _ in
             TestViewController.push(from: self.navigationController!, orientation: .portrait)
@@ -71,6 +78,14 @@ class MainViewController: BaseViewController {
         })
         
         alertCtr.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        // for iPad
+        if let popover = alertCtr.popoverPresentationController {
+            popover.sourceView = view
+            popover.sourceRect = CGRect(origin: point, size: CGSize(width: 1, height: 1))
+            popover.permittedArrowDirections = point.y >= view.frame.height * 0.5 ? .down : .up
+        }
+        
         present(alertCtr, animated: true)
     }
     

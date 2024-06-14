@@ -3,13 +3,14 @@
 A utility class that allows for rotating/locking screen orientation anytime, anywhere.
 
     Features:
-        ✅ Control rotation in three directions:
-            - Portrait: Device held upright.
-            - Landscape: Device rotated with the top towards the left.
-            - Landscape: Device rotated with the top towards the right.
-        ✅ Control whether screen orientation changes automatically with device movement.
-        ✅ Compatible with iOS 16.
-        ✅ Compatible with OC & Swift & SwiftUI.
+        ✅ Supports rotation control in four directions:
+            - Portrait: Top of the phone is up
+            - Portrait: Top of the phone is down
+            - Landscape: Top of the phone is to the left
+            - Landscape: Top of the phone is to the right
+        ✅ Allows control over whether the screen orientation changes automatically with device movement;
+        ✅ Compatible with iOS 16;
+        ✅ Supports Objective-C, Swift, and SwiftUI;
         ✅ Simple and easy-to-use API.
 
 ## Usage Examples:
@@ -75,83 +76,101 @@ ScreenRotator.shared.orientationMaskDidChange = { orientationMask in
 }
 ```
 
+5. For iPad App, you need to go to `TARGETS` -> `General` -> `Deployment Info` -> enable `Requires full screen` to use code to rotate the screen:
+
+![ScreenRotator_4.jpg](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_4.jpg)
+
 ## API:
 
 Methods available through the singleton `ScreenRotator.shared`:
 
-1. Rotate to a specific orientation:
+1. Rotate to target orientation
 
 ```swift
 func rotation(to orientation: Orientation)
 ```
 
-2. Rotate to portrait orientation:
+2. Rotate to Portrait (Top of the phone is up)
 
 ```swift
 func rotationToPortrait()
 ```
 
-3. Rotate to landscape orientation (with the top towards the left if screen lock is disabled):
+3. Rotate to Portrait (Top of the phone is down)
+
+```swift
+func rotationToPortraitUpsideDown()
+```
+
+4. Rotate to Landscape (If screen is locked, rotates to left side of the phone)
 
 ```swift
 func rotationToLandscape()
 ```
 
-4. Rotate to landscape orientation with the top towards the left:
+5. Rotate to Landscape (Top of the phone is to the left)
 
 ```swift
 func rotationToLandscapeLeft()
 ```
 
-5. Rotate to landscape orientation with the top towards the right:
+6. Rotate to Landscape (Top of the phone is to the right)
 
 ```swift
 func rotationToLandscapeRight()
 ```
 
-6. Toggle between portrait and landscape orientations:
+7. Toggle between Portrait and Landscape
 
 ```swift
 func toggleOrientation()
 ```
 
-7. Check if the device is in portrait orientation:
+8. Is in Portrait mode (Top of the phone is up)
 
 ```swift
 var isPortrait: Bool
 ```
 
-8. Get the current screen orientation (ScreenRotator.Orientation):
+9. Current screen orientation (ScreenRotator.Orientation)
 
 ```swift
 var orientation: Orientation
 ```
 
-9. Lock/unlock screen orientation changes based on device rotation:
+10. Allow rotation to Portrait (Top of the phone is down) (Default is false)
 
 ```swift
-var isLockOrientationWhenDeviceOrientationDidChange: Bool 
+var isAllowPortraitUpsideDown: Bool = false
 ```
 
-10. Lock/unlock landscape orientation changes based on device rotation:
+11. Lock screen orientation (If Portrait Orientation Lock is disabled in Control Center, setting this to `true` will prevent automatic screen rotation based on device movement)
 
 ```swift
-var isLockLandscapeWhenDeviceOrientationDidChange: Bool 
+var isLockOrientationWhenDeviceOrientationDidChange = true 
+// Note: Even if locked (`true`), you can still change screen orientation using this tool
 ```
 
-11. Closure to handle changes in screen orientation:
+12. Lock Landscape orientation (If Portrait Orientation Lock is disabled in Control Center, setting this to `true` will allow screen rotation based on device movement, but only for landscape orientations)
+
+```swift
+var isLockLandscapeWhenDeviceOrientationDidChange = false 
+// Note: Even if locked (`true`), you can still change screen orientation using this tool
+```
+
+13. Closure to handle changes in screen orientation:
 
 ```swift
 var orientationMaskDidChange: ((_ orientationMask: UIInterfaceOrientationMask) -> ())?
 ```
 
-12. Closure to handle changes in lock status for screen orientation:
+14. Closure to handle changes in lock status for screen orientation:
 
 ```swift
 var lockOrientationWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
 ```
 
-13. Closure to handle changes in lock status for landscape orientation:
+15. Closure to handle changes in lock status for landscape orientation:
 
 ```swift
 var lockLandscapeWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
@@ -216,8 +235,9 @@ pod 'ScreenRotator'
 屏幕旋转工具类，能通过代码随时随地旋转/锁定屏幕方向。
 
     Feature：
-        ✅ 可控制旋转三个方向：
+        ✅ 可控制旋转四个方向：
             - 竖屏：手机头在上边
+            - 竖屏：手机头在下边
             - 横屏：手机头在左边
             - 横屏：手机头在右边
         ✅ 可控制是否随手机摆动自动改变屏幕方向；
@@ -288,6 +308,10 @@ ScreenRotator.shard.orientationMaskDidChange = { orientationMask in
 }
 ```
 
+5. 如果是`iPad App`，需要去`TARGETS` -> `General` -> `Deployment Info` -> 打开`Requires full screen`，方可使用代码旋转屏幕：
+
+![ScreenRotator_4.jpg](https://github.com/Rogue24/JPCover/raw/master/ScreenRotator/ScreenRotator_4.jpg)
+
 ## API
 
 全局使用单例`ScreenRotator.shared`调用：
@@ -298,75 +322,87 @@ ScreenRotator.shard.orientationMaskDidChange = { orientationMask in
 func rotation(to orientation: Orientation)
 ```
 
-2. 旋转至竖屏
+2. 旋转至竖屏（手机头在上边）
 
 ```swift
 func rotationToPortrait()
 ```
 
-3. 旋转至横屏（如果锁定了屏幕，则转向手机头在左边）
+3. 旋转至竖屏（手机头在下边）
+
+```swift
+func rotationToPortraitUpsideDown()
+```
+
+4. 旋转至横屏（如果锁定了屏幕，则转向手机头在左边）
 
 ```swift
 func rotationToLandscape()
 ```
 
-4. 旋转至横屏（手机头在左边）
+5. 旋转至横屏（手机头在左边）
 
 ```swift
 func rotationToLandscapeLeft()
 ```
 
-5. 旋转至横屏（手机头在右边）
+6. 旋转至横屏（手机头在右边）
 
 ```swift
 func rotationToLandscapeRight()
 ```
 
-6. 横竖屏切换
+7. 横竖屏切换
 
 ```swift
 func toggleOrientation()
 ```
 
-7. 是否正在竖屏
+8. 是否正在竖屏（手机头在上边）
 
 ```swift
 var isPortrait: Bool
 ```
 
-8. 当前屏幕方向（ScreenRotator.Orientation）
+9. 当前屏幕方向（ScreenRotator.Orientation）
 
 ```swift
 var orientation: Orientation
 ```
 
-9. 是否锁定屏幕方向（当控制中心禁止了竖屏锁定，为`true`则不会【随手机摆动自动改变】屏幕方向）
+10. 是否允许转向`竖屏-手机头在下边`的方向（默认不允许）
+
+```swift
+var isAllowPortraitUpsideDown: Bool
+```
+
+11. 是否锁定屏幕方向（当控制中心禁止了竖屏锁定，为`true`则不会【随手机摆动自动改变】屏幕方向）
 
 ```swift
 var isLockOrientationWhenDeviceOrientationDidChange = true 
 // PS：即便锁定了（`true`）也能通过该工具类去旋转屏幕方向
 ```
 
-10. 是否锁定横屏方向（当控制中心禁止了竖屏锁定，为`true`则【仅限横屏的两个方向会随手机摆动自动改变】屏幕方向）
+12. 是否锁定横屏方向（当控制中心禁止了竖屏锁定，为`true`则【仅限横屏的两个方向会随手机摆动自动改变】屏幕方向）
 
 ```swift
 var isLockLandscapeWhenDeviceOrientationDidChange = false 
 // PS：即便锁定了（`true`）也能通过该工具类去旋转屏幕方向
 ```
 
-11. <屏幕方向>发生改变的回调闭包
+13. <屏幕方向>发生改变的回调闭包
 
 ```swift
 var orientationMaskDidChange: ((_ orientationMask: UIInterfaceOrientationMask) -> ())?
 ```
 
-12. <是否锁定屏幕方向>发生改变的回调闭包
+14. <是否锁定屏幕方向>发生改变的回调闭包
 
 ```swift
 var lockOrientationWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
 ```
 
-13. <是否锁定横屏方向>发生改变的回调闭包
+15. <是否锁定横屏方向>发生改变的回调闭包
 
 ```swift
 var lockLandscapeWhenDeviceOrientationDidChange: ((_ isLock: Bool) -> ())?
