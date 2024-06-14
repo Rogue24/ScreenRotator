@@ -373,7 +373,7 @@ var orientation: Orientation
 10. 是否允许转向`竖屏-手机头在下边`的方向（默认不允许）
 
 ```swift
-var isAllowPortraitUpsideDown: Bool
+var isAllowPortraitUpsideDown: Bool = false
 ```
 
 11. 是否锁定屏幕方向（当控制中心禁止了竖屏锁定，为`true`则不会【随手机摆动自动改变】屏幕方向）
